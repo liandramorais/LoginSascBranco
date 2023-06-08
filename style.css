@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+--font1: ABeeZee;
+--verde: #01B574;
+}
+
+body {
+    background-image: url(img/Background1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+header {
+    height: 80px;
+    display:flex;
+    align-items: center;
+}
+
+.container-grid {
+    width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+
+    width: 80px;
+}
+
+label {
+    width: 120px ;
+    height: 70px;
+
+    margin-top: -2px;
+    position: relative ;
+
+    cursor: pointer;
+}
+
+label input {
+    position: relative;
+    z-index: 1;
+    appearance: none;
+}
+
+label span {
+    width: 40px;
+    height: 23px;
+    position: absolute;
+    left: 70px;
+
+    background-color: green;
+    border-radius: 80px;
+    transition: 0,5s;
+}
+
+label input:checked ~ span{
+    background: #CF4B83;
+}
+label span i {
+    width: 20px;
+    height: 15px;
+
+    top: 3.8px;
+    left: 2px;
+    position: absolute;
+    transition: 0,5s;
+
+    background: white;
+    border-radius: 50%;
+}
+
+label input:checked ~ span i {
+    left: 18px;
+    background: #393939;
+}
+main {
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.direita {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.direita img {
+    width: 70%;
+    margin: 20px;
+    margin-left: 100px;
+
+}
+
+.direita p {
+    margin-left: 30px;
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.esquerda {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.esquerda form {
+    width: 60%;
+    height: 80%;
+    margin: 8%;
+    padding: 5%;
+    border-radius: 23%;
+    background-color: #ffffff;
+
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.esquerda h2 {
+    color: var(--verde);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.esquerda p {
+    color: #8f8f8f;
+}
+.label-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label-input input {
+        color: white;
+        text-align: center;
+        margin: 10px;
+        background-color: #8f8f8f3a;
+        border: none;
+        height: 40px;
+        width: 300px;
+        border-radius: 30%;
+}
+
+.esquerda button {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--verde);
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+.esquerda a {
+    margin: 10px;
+    text-decoration: none;
+    color: var(--verde);
+    font-size: 10px;
+    display: flex;
+    position: relative;
+    left: 30%;
+}
+
+.esquerda button:hover {
+    border: solid 1px black;
+}
+
+@media screen and (max-width: 320px) {
+    header {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    body {
+        background-image: none;
+    }
+    form {
+        margin: 0;
+        padding: 0;
+    }
+    .esquerda {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .direita {
+        display:flex;
+        align-items: center;
+    }
+    .direita > img {
+        margin-left: -120px;
+    }
+    .direita > p {
+        font-size: 40px;
+        color: #393939;
+    }
+}
+@media screen and (max-width: 638px) {
+    .label-input > input {
+    /* width: 100%; */
+    /* height: 100%; */
+
+    /* margin: 8%; */
+    /* padding: 5%; */
+    }
+}
+
+/* @media all and (orientation: landscape) {} */
